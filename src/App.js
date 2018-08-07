@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-const numBoxes = 20;
+const numBoxes = 200;
 
 class App extends Component {
   constructor(props) {
     super(props);
     let colArr = Array(numBoxes).fill().map((el) => this.genRandCol(el));
     this.state = {
-      colArr
+      colArr,
+      interval:1000
     }
     setInterval(() => {
       let colArr = Array(numBoxes).fill().map((el) => this.genRandCol());
       this.setState({colArr})
-    }, 100);
+    }, this.state.interval);
   }
   genRandCol = () => (
      `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
@@ -32,9 +33,8 @@ class App extends Component {
 class Box extends Component {
   render() {
     let color = this.props.color;
-    let side = this.props.side;
     return (
-      <div className="box" style={{backgroundColor:color, width:side, height: side}}></div>
+      <div className="box" style={{backgroundColor:color}}></div>
     );
   }
 }
