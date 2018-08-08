@@ -1,5 +1,24 @@
+.container {
+  text-align: center;
+  margin-top: 15px;
+
+}
+.boxes{
+  margin-top: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .box {
+  margin: 4px 0;
   width: 100px;
   height: 100px;
-  display: inline-block;
+}
+.speedBtn {
+  margin: 1px 3px 0px 0px
+}
+@media(max-width: 400px) {
+  span{
+    display: block;
+  }
 }
