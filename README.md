@@ -1,4 +1,4 @@
-# react-airbnb-clone
+# random-boxes
 Random color boxes generetor with transition speed controller
 [live version](https://secure-oasis-59337.herokuapp.com/)
 Hosted on Heroku
